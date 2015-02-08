@@ -1,0 +1,155 @@
+*{
+	margin:0;
+	_border:1px solid;
+}
+.clear { clear: both; }
+
+/* Generales */
+body {
+	background-color: rgba(150,150,150,0.2);
+}
+header {
+	background: linear-gradient(to right, rgba(150,150,150,0.2) 0%, rgba(150,150,150,0.2) 39%, rgba(250,250,250,0.2) 61%, rgba(250,250,250,0.2) 100%);
+	background-size: contain;
+	padding: 1px;
+}
+h1{ margin: 10px }
+h2{ margin-top: 30px;
+	margin-bottom: 5px }
+hgroup{
+	color: rgb(50, 50, 50);
+	font-size: 50px;
+	text-align: center;
+	text-shadow: rgb(250, 250, 250) 2px 2px 0px;
+	margin: 10px;
+}
+
+nav {
+	background: linear-gradient(to right, rgba(250,250,250,0.2) 0%, rgba(250,250,250,0.2) 39%, rgba(150,150,150,0.2) 62%, rgba(150,150,150,0.2) 100%);
+	float: top;
+	overflow:hidden;
+	margin: 0;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+nav li{
+	display:inline;
+	margin: 5px 5px;
+	float: left;
+}
+nav li a{
+	font-size: 1.1em;
+	border-left: 1px solid black;
+	padding-left: 10px;
+}
+
+footer {
+	clear:both;
+	float: botton;
+	background: linear-gradient(to right, rgba(250,250,250,0.2) 0%, rgba(250,250,250,0.2) 39%, rgba(150,150,150,0.2) 62%, rgba(150,150,150,0.2) 100%);
+}
+footer p{
+	display:inline;
+	font-size: 1.1em;
+	margin:5px 5px;
+}
+footer p a{
+	margin:5px 5px;
+}
+
+
+p{
+	margin: 0px;
+	font-size:0.8em;
+}
+
+/* Solo para Index (ePortfolio) */
+section.ePortfolio{
+	float: left;
+	margin: 0;
+	width: 100%;
+}
+h2.Perfil, h2.Experiencia {
+	text-align: center;
+}
+p.Perfil, p.Experiencia{
+	font-size:1.1em;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+/* Solo para Titles (Formación académica) */
+section.Titles{
+    position: relative;
+}
+img.Title{
+	float: left;
+	display: block;
+	height: 80%;
+	visibility: hidden;
+	overflow: visible;
+}
+img.Big_Title{
+    position: absolute;
+    visibility: hidden;
+	height: 95%;
+	margin: 1%;
+}
+
+/* Solo para Work (Experiencia laboral) */
+section.Works{
+	float:right;
+	margin-top: 2%;
+	margin-right: 2%;
+	width: 35%;
+}
+section.Works ul.bxslider {
+	width: 100%;
+	padding: 0px;
+}
+section.Works img{
+	width: 100%;
+}
+
+/* Común a articles (Artículos Científicos), events (Eventos Científicos) y posgraduates (Formación complementaria) */
+section.Articles{
+	float: left;
+	margin: 0 1%;
+	width: 60%;
+}
+
+p.Title{
+	background: linear-gradient(to right, rgba(150,150,150,0.2) 0%, rgba(150,150,150,0.2) 39%, rgba(250,250,250,0.2) 61%, rgba(250,250,250,0.2) 100%);
+
+	margin-top: 5px;
+	text-decoration:underline;
+	font-size:1.1em;
+}
+p.Title:hover{
+	background: linear-gradient(to right, rgba(250,250,250,0.2) 0%, rgba(250,250,250,0.2) 39%, rgba(150,150,150,0.2) 62%, rgba(150,150,150,0.2) 100%);
+}
+p span{
+	font-weight: bold;
+}
+
+aside{
+	float: right;
+    display: block;
+	margin: 1% 1% 0 1%;
+	width: 35%;
+}
+
+#Show_Article {
+	width: 90%;
+}
+
+article ul {
+	padding: 0px;
+}
+/*Oculta listas anidadas*/
+article ul li {
+	padding-left: 40px;
+	display: none;
+}
+
+
