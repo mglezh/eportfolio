@@ -9,6 +9,7 @@ body {
 	background-color: rgba(150,150,150,0.2);
 }
 header {
+/*	position: absolute; */
 	background: linear-gradient(to right, rgba(150,150,150,0.2) 0%, rgba(150,150,150,0.2) 39%, rgba(250,250,250,0.2) 61%, rgba(250,250,250,0.2) 100%);
 	background-size: contain;
 	padding: 1px;
@@ -18,7 +19,7 @@ h2{ margin-top: 30px;
 	margin-bottom: 5px }
 hgroup{
 	color: rgb(50, 50, 50);
-	font-size: 50px;
+	font-size: 2em;
 	text-align: center;
 	text-shadow: rgb(250, 250, 250) 2px 2px 0px;
 	margin: 10px;
@@ -58,9 +59,18 @@ footer p a{
 }
 
 
-p{
+p{ /*Cambiar esto, es muy general*/
 	margin: 0px;
 	font-size:0.8em;
+}
+
+.events,
+.works,
+.articles,
+.fcomplementaria{
+	float: left;
+	width: 60%;
+	margin: 0;	
 }
 
 /* Solo para Index (ePortfolio) */
@@ -97,37 +107,29 @@ img.Big_Title{
 }
 
 /* Solo para Work (Experiencia laboral) */
-section.Works{
+.worksslider{
 	float:right;
 	margin-top: 2%;
 	margin-right: 2%;
 	width: 35%;
 }
-section.Works ul.bxslider {
-	width: 100%;
+.bxslider {
 	padding: 0px;
 }
-section.Works img{
+.bxslider img{
 	width: 100%;
 }
 
-/* Común a articles (Artículos Científicos), events (Eventos Científicos) y posgraduates (Formación complementaria) */
-section.Articles{
-	float: left;
-	margin: 0 1%;
-	width: 60%;
-}
-
-p.Title{
+.Title{
 	background: linear-gradient(to right, rgba(150,150,150,0.2) 0%, rgba(150,150,150,0.2) 39%, rgba(250,250,250,0.2) 61%, rgba(250,250,250,0.2) 100%);
-
 	margin-top: 5px;
-	text-decoration:underline;
-	font-size:1.1em;
+	text-decoration
+	font-size:1.2em;
 }
-p.Title:hover{
+.Title:hover{
 	background: linear-gradient(to right, rgba(250,250,250,0.2) 0%, rgba(250,250,250,0.2) 39%, rgba(150,150,150,0.2) 62%, rgba(150,150,150,0.2) 100%);
 }
+
 p span{
 	font-weight: bold;
 }
@@ -143,37 +145,32 @@ aside{
 	width: 90%;
 }
 
-article ul {
-	padding: 0px;
-}
-/*Oculta listas anidadas*/
-article ul li {
-	padding-left: 40px;
-	display: none;
-}
-
-
-/*Manejo de los menus*/
-.menu{
-	float: left;
-	width: 60%;
-	margin: 0;	
-.}
-.menu > li {	
+.fcomplementaria > li {	
 	position:relative;
 	padding: 0px;
 }
-.submenu {
-	position: absolute;
+/*Oculta listas anidadas*/
+.thishassubmenu .submenu {
+	padding-left: 40px;
 	width: 95%;
 	left: 5%;
 	top: 100%;
-	border: 1px solid black;
 	background-color: white;
 	display: none;
 }
-.menu > li:hover .submenu {
+.thishassubmenu p:first-child:hover ~ .submenu {
 	display: block;
+}
+
+.thishassubmenu p:first-child span{
+	font-size: 1.5em;
+	text-decoration: none;
+}
+.thishassubmenu p:first-child span::after{
+	content: ' + ';
+}
+.thishassubmenu p:first-child:hover span::after{
+	content: ' - ';
 }
 .asignatura{
 	background-color: white;

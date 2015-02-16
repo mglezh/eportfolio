@@ -4,10 +4,10 @@ var Art_url= "";
 function SelectArticle(Art_Img) {
 	try {
 		Art_url= Art_Img;
-		ElementAside = document.getElementsByTagName("aside");
+		ElementAside= document.getElementsByTagName("aside");
 		ElementImage= document.getElementById("Show_Article");
-		if (window.scrollY >= ElementImage.offsetTop) ElementImage.style.marginTop = (window.scrollY - ElementImage.parentElement.offsetTop).toString() + "px";
-		else ElementImage.style.marginTop = "0";
+		if (window.scrollY >= ElementImage.offsetTop) ElementAside[0].style.marginTop = (window.scrollY - ElementAside[0].parentElement.offsetTop).toString() + "px";
+		else ElementAside[0].style.marginTop = "0";
 		if (Art_Img == "") {
 			ElementImage.src= "images/image_not_found.png";
 		} else {
@@ -40,23 +40,6 @@ function tamanoVentanaNavegador(){
 	return dimensiones;
 }
 
-function ShowList(Element) {
-	var List = Element.parentElement;
-	for (i in List.children) {
-		if (List.children[i].className=="list") {
-			List.children[i].style.display="block"
-			List.children[i].style.backgroundColor="white"
-		}
-	}
-}
-
-function HideList(Element){
-	var List = Element.parentElement;
-	for (i in List.children) {
-		if (List.children[i].className=="list") List.children[i].style.display="none"
-	}
-}
-
 function SetImg() {
 	var WindowsSize = tamanoVentanaNavegador();
 	var BigImage = document.getElementById("Big_img");
@@ -74,18 +57,17 @@ function SetImg() {
 		window.setTimeout(ShowImg, 10);
 	}
 }
+
 function ShowImg() {document.getElementById("Big_img").style.visibility="visible";}
 function HideImg() {document.getElementById("Big_img").style.visibility="hidden";}
 
 function Resize() {
 	var WindowsSize = tamanoVentanaNavegador();
-	var SectionHeight = (	WindowsSize[1] - 
-				document.getElementsByTagName("header")[0].clientHeight -
-				document.getElementsByTagName("nav")[0].clientHeight -
-				document.getElementsByTagName("footer")[0].clientHeight);
+	var SectionHeight = (WindowsSize[1] - 
+				document.getElementsByTagName("header")[0].offsetHeight - // offsetHeight : include padding, border and margin
+				document.getElementsByTagName("nav")[0].offsetHeight -
+				document.getElementsByTagName("footer")[0].offsetHeight);
 
-	if (document.getElementsByClassName("ePortfolio").length)
-		document.getElementsByClassName("ePortfolio")[0].style.minHeight = SectionHeight.toString() + "px";
 	if (document.getElementsByClassName("Titles").length) {
 		document.getElementsByClassName("Titles")[0].style.minHeight = SectionHeight.toString() + "px";
 		var Titles = document.getElementsByClassName("Title");
@@ -97,6 +79,10 @@ function Resize() {
 			}
 		}
 	}
+	if (document.getElementsByClassName("ePortfolio").length)
+		document.getElementsByClassName("ePortfolio")[0].style.minHeight = SectionHeight.toString() + "px";
+	if (document.getElementsByClassName("fcomplementaria").length)			
+		document.getElementsByClassName("fcomplementaria")[0].style.minHeight = SectionHeight.toString() + "px";
 	if (document.getElementsByClassName("Articles").length)			
 		document.getElementsByClassName("Articles")[0].style.minHeight = SectionHeight.toString() + "px";
 	if (document.getElementsByClassName("aside").length)			
