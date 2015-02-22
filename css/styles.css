@@ -6,15 +6,24 @@
 
 /* Generales */
 body {
-	background-color: rgba(150,150,150,0.2);
+	margin:0;
+	font-size: 12px;
+	background-color: rgba(240,240,240,0.6);
+}
+p{
+	margin:0;
+	font-size: 12px;
 }
 header {
-/*	position: absolute; */
-	background: linear-gradient(to right, rgba(150,150,150,0.2) 0%, rgba(150,150,150,0.2) 39%, rgba(250,250,250,0.2) 61%, rgba(250,250,250,0.2) 100%);
+ 	position: fixed;
+ 	top: 0; 
+ 	width: 100%;
+	background: linear-gradient(to right, rgba(220,220,220,0.9) 0%, rgba(190,190,190,0.9) 20%, rgba(190,190,190,0.9) 80%, rgba(220,220,220,0.9) 100%);
 	background-size: contain;
 	padding: 1px;
+	z-index: 2;
 }
-h1{ margin: 10px }
+h1{ margin: 10px auto }
 h2{ margin-top: 30px;
 	margin-bottom: 5px }
 hgroup{
@@ -26,22 +35,33 @@ hgroup{
 }
 
 nav {
-	background: linear-gradient(to right, rgba(250,250,250,0.2) 0%, rgba(250,250,250,0.2) 39%, rgba(150,150,150,0.2) 62%, rgba(150,150,150,0.2) 100%);
+	background: linear-gradient(to right, rgba(190,190,190,0.9) 0%, rgba(220,220,220,0.9) 20%, rgba(220,220,220,0.9) 80%, rgba(190,190,190,0.9) 100%);
 	float: top;
 	overflow:hidden;
 	margin: 0;
-	border-top: 2px solid black;
-	border-bottom: 2px solid black;
+	_border-top: 2px solid black;
+	_border-bottom: 2px solid black;
+}
+nav ul{
+	margin: 0 auto;
+	text-align: center;
 }
 nav li{
 	display:inline;
 	margin: 5px 5px;
-	float: left;
+	display: inline;
 }
 nav li a{
 	font-size: 1.1em;
-	border-left: 1px solid black;
 	padding-left: 10px;
+}
+nav li a: active{
+	color: blue;
+}
+
+.container{
+	width: 100%;
+	margin-top: 82px;
 }
 
 footer {
@@ -59,59 +79,48 @@ footer p a{
 }
 
 
-p{ /*Cambiar esto, es muy general*/
+_p{ /*Cambiar esto, es muy general*/
 	margin: 0px;
 	font-size:0.8em;
-}
-
-.events,
-.works,
-.articles,
-.fcomplementaria{
-	float: left;
-	width: 60%;
-	margin: 0;	
 }
 
 /* Solo para Index (ePortfolio) */
 section.ePortfolio{
 	float: left;
-	margin: 0;
 	width: 100%;
 }
 h2.Perfil, h2.Experiencia {
+	font-size:1.8em;
 	text-align: center;
 }
 p.Perfil, p.Experiencia{
-	font-size:1.1em;
+	font-size:1em;
 	margin-left: 25%;
 	margin-right: 25%;
 }
 
-/* Solo para Titles (Formación académica) */
-section.Titles{
-    position: relative;
+/* Solo para titles (Formación académica) */
+.titles{
+    text-align: center;
 }
-img.Title{
-	float: left;
-	display: block;
-	height: 80%;
-	visibility: hidden;
+.titles .row{
+	margin: 10% auto;
+}
+.titles .academic-title{
+	max-width: 160px;
 	overflow: visible;
+	transition-property: transform;
+	transition-duration: 400ms;
 }
-img.Big_Title{
-    position: absolute;
-    visibility: hidden;
-	height: 95%;
-	margin: 1%;
+.titles .academic-title:hover{
+	transform-origin: 50% 40%;
+	transform: scale(2, 2);
 }
 
 /* Solo para Work (Experiencia laboral) */
 .worksslider{
-	float:right;
 	margin-top: 2%;
 	margin-right: 2%;
-	width: 35%;
 }
 .bxslider {
 	padding: 0px;
@@ -120,33 +129,30 @@ img.Big_Title{
 	width: 100%;
 }
 
-.Title{
-	background: linear-gradient(to right, rgba(150,150,150,0.2) 0%, rgba(150,150,150,0.2) 39%, rgba(250,250,250,0.2) 61%, rgba(250,250,250,0.2) 100%);
-	margin-top: 5px;
-	text-decoration
-	font-size:1.2em;
-}
-.Title:hover{
-	background: linear-gradient(to right, rgba(250,250,250,0.2) 0%, rgba(250,250,250,0.2) 39%, rgba(150,150,150,0.2) 62%, rgba(150,150,150,0.2) 100%);
-}
-
 p span{
 	font-weight: bold;
 }
 
 aside{
-	float: right;
-    display: block;
-	margin: 1% 1% 0 1%;
-	width: 35%;
 }
 
-#Show_Article {
-	width: 90%;
+.curso-title,
+.work-title,
+.event-title,
+.article-title{
+	background: linear-gradient(to right, rgba(150,150,150,0.2) 0%, rgba(150,150,150,0.2) 39%, rgba(250,250,250,0.2) 61%, rgba(250,250,250,0.2) 100%);
+	margin-top: 5px;
+	text-decoration
+	font-size:1.2em;
+}
+.curso-title:hover,
+.work-title:hover,
+.event-title:hover,
+.article-title:hover{
+	background: linear-gradient(to right, rgba(250,250,250,0.2) 0%, rgba(250,250,250,0.2) 39%, rgba(150,150,150,0.2) 62%, rgba(150,150,150,0.2) 100%);
 }
 
 .fcomplementaria > li {	
-	position:relative;
 	padding: 0px;
 }
 /*Oculta listas anidadas*/
@@ -161,7 +167,6 @@ aside{
 .thishassubmenu p:first-child:hover ~ .submenu {
 	display: block;
 }
-
 .thishassubmenu p:first-child span{
 	font-size: 1.5em;
 	text-decoration: none;
@@ -173,6 +178,10 @@ aside{
 	content: ' - ';
 }
 .asignatura{
+	font-size: 1em;
 	background-color: white;
-	z-index:2;
+}
+
+#Show_Article {
+	width: 90%;
 }
