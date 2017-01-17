@@ -1,6 +1,7 @@
 // JavaScript Document
+var work_slider;
 $(document).ready(function()
-{$('.bxslider').bxSlider({
+{	work_slider = $('.bxslider').bxSlider({
 	auto: true,
 	pause: 2000,
 	mode: 'fade',
