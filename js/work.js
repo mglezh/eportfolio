@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // JavaScript Document
 var work_slider;
 $(document).ready(function()
@@ -9,3 +10,16 @@ $(document).ready(function()
 	adaptiveHeight: true
 });
 });
+=======
+// JavaScript Document
+var work_slider;
+$(document).ready(function()
+{	work_slider = $('.bxslider').bxSlider({
+	auto: true,
+	pause: 2000,
+	mode: 'fade',
+	captions: true,
+	adaptiveHeight: true
+});
+});
+>>>>>>> origin/master
