@@ -11,14 +11,10 @@
     <body>
         <section class="wrapper">
             <header>
-                <?php 
-                   	require_once("php/head.php");
-                 ?> 
+                <? require_once("php/head.php");?> 
             </header>
             <nav>
-                <?php 
-                    require_once("php/nav.php");
-                 ?> 
+                <? require_once("php/nav.php");?> 
             </nav>
             <div>
 	            <img class="Big_Title" id="Big_img" src="images/Titulos/1992 - Titulo de Ingeniero en Maquinas computadoras - ISPJAE_middle.jpg" > </img>
@@ -58,9 +54,7 @@
 	            </aside>
 	        </div>
             <footer>
-				<?php 
-				    require_once("php/pie.php");
-                ?> 
+				<? require_once("php/pie.php"); ?> 
             </footer>
         </section>
     </body>

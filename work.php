@@ -21,14 +21,10 @@
 	<body>
 		<section class="wrapper">
 		    <header>
-                <?php 
-                   	require_once("php/head.php");
-                ?> 
+                <? require_once("php/head.php");?> 
 		    </header>
 		    <nav>
-	            <?php 
-	                require_once("php/nav.php");
-	             ?> 
+	            <? require_once("php/nav.php");?> 
 		    </nav>
 			<section class="works">
 			    <ul>
@@ -116,9 +112,7 @@
 			    </section>
 			</aside>
 	        <footer>
-	            <?php 
-					require_once("php/pie.php");
-	             ?> 
+	            <? require_once("php/pie.php");?> 
 	        </footer>
 		</section>
 	</body>
